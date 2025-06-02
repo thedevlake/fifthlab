@@ -5,6 +5,7 @@ import img4 from "../images/solutions/4.png";
 import img5 from "../images/solutions/5.png";
 import img6 from "../images/solutions/6.png";
 import phones from "../images/phones.png";
+import { ArrowUpRight } from "lucide-react";
 
 function Solutions() {
   return (
@@ -61,9 +62,11 @@ function Solutions() {
               and customer relationship management, allowing you to focus on
               what matters most - growing your business.
             </p>
-            <button className="bg-black text-white p-3 rounded-full">
-              Visit Website
-            </button>
+            <div className="flex items-center gap-3 bg-black text-white p-3 rounded-full hover:outline-3 hover:outline-blue-300">
+              <button className="text-sm">Visit Website</button>
+
+              <ArrowUpRight className="w-4 h-4" />
+            </div>
           </div>
           <div className="bg-[#695ACD] rounded-lg">
             <img src={phones} alt="" className="pt-20 px-8" />

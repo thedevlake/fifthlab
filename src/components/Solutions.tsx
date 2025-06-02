@@ -1,0 +1,70 @@
+function Solutions() {
+  return (
+    <div className="h-screen mt-6 text-center mx-auto px-28">
+      <div className="flex flex-col  gap-7">
+        <h1 className="text-3xl text-[#0E0E0E] font-semibold">Our Solutions</h1>
+        <p className="text-[#A7A7A7] text-base mt-2">
+          This is just a randomly generated text to be included in a later date{" "}
+          <br />
+          based on a final draft to be decided by the content team.
+        </p>
+        {/*  */}
+        <div className="flex justify-center gap-10">
+          <img
+            src="/src/images/solutions/1.png"
+            alt=""
+            className="object-cover bg-[#EEF6FF] px-4 py-3 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
+          />
+          <img
+            src="/src/images/solutions/2.png"
+            alt=""
+            className="object-cover bg-[#EEF6FF] px-4 py-3 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
+          />
+          <img
+            src="/src/images/solutions/3.png"
+            alt=""
+            className="object-cover bg-[#EEF6FF] px-4 py-3 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
+          />
+          <img
+            src="/src/images/solutions/4.png"
+            alt=""
+            className="object-cover bg-[#EEF6FF] px-4 py-3 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
+          />
+          <img
+            src="/src/images/solutions/5.png"
+            alt=""
+            className="object-cover bg-[#EEF6FF] px-4 py-3 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
+          />
+          <img
+            src="/src/images/solutions/6.png"
+            alt=""
+            className="object-cover bg-[#EEF6FF] px-4 py-3 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
+          />
+        </div>
+        {/*  */}
+        <div className=" mt-4 grid grid-cols-2 place-items-center mx-auto px-10 pt-15 pb-12 rounded-2xl shadow-lg gap-10 bg-white">
+          {/*  */}
+          <div className="justify-start items-start text-left gap-y-5 w-[400px] flex flex-col">
+            <p className="text-black text-2xl font-bold">SmerpGo</p>
+            <p className="text-[#828282] text-sm">
+              Take control of your business operations with SMERP, our
+              comprehensive Enterprise Resource Planning (ERP) software.  SMERP
+              streamlines tasks like inventory management, financial reporting,
+              and customer relationship management, allowing you to focus on
+              what matters most - growing your business.
+            </p>
+            <button className="bg-black text-white p-3 rounded-full">
+              Visit Website
+            </button>
+          </div>
+          <div className="bg-[#695ACD] rounded-lg">
+            <img src="src/images/phones.png" alt="" className="pt-20 px-8" />
+          </div>
+          {/*  */}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Solutions;

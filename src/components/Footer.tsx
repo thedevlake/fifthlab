@@ -7,6 +7,8 @@ import {
   MapPin,
   Phone,
 } from "lucide-react";
+import logo from "../images/logo.png";
+import comply from "../images/comply.png";
 
 const Footer = () => {
   return (
@@ -15,11 +17,7 @@ const Footer = () => {
         {/* Column 1: Logo and Socials */}
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <img
-              src="/src/images/logo.png"
-              alt="Fifthlab Logo"
-              className="h-6"
-            />
+            <img src={logo} alt="Fifthlab Logo" className="h-6" />
             <span className="font-bold text-xl">fifthlab</span>
           </div>
           <p className="text-[#6F6C90] text-sm mb-4">
@@ -39,11 +37,7 @@ const Footer = () => {
               <Linkedin fill="white" stroke="black" />
             </a>
           </div>
-          <img
-            src="/src/images/comply.png"
-            alt="NDPR Audit Compliant 2023"
-            className="h-16"
-          />
+          <img src={comply} alt="NDPR Audit Compliant 2023" className="h-16" />
         </div>
 
         {/* Column 2: Links */}

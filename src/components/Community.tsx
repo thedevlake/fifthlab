@@ -1,3 +1,4 @@
+import drawing from "../images/drawing.png";
 function Community() {
   return (
     <div className="bg-black text-white grid grid-cols-2 place-items-center py-12 mt-12 mb-0">
@@ -28,7 +29,7 @@ function Community() {
 
       {/* right section */}
       <div>
-        <img src="/src/images/drawing.png" alt="" className="pr-12" />
+        <img src={drawing} alt="" className="pr-12" />
       </div>
     </div>
   );

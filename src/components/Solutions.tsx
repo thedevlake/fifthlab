@@ -1,6 +1,14 @@
+import img1 from "../images/solutions/1.png";
+import img2 from "../images/solutions/2.png";
+import img3 from "../images/solutions/3.png";
+import img4 from "../images/solutions/4.png";
+import img5 from "../images/solutions/5.png";
+import img6 from "../images/solutions/6.png";
+import phones from "../images/phones.png";
+
 function Solutions() {
   return (
-    <div className="h-screen mt-6 text-center mx-auto px-28">
+    <div className="my-20 text-center mx-auto px-28">
       <div className="flex flex-col  gap-7">
         <h1 className="text-3xl text-[#0E0E0E] font-semibold">Our Solutions</h1>
         <p className="text-[#A7A7A7] text-base mt-2">
@@ -11,32 +19,32 @@ function Solutions() {
         {/*  */}
         <div className="flex justify-center gap-10">
           <img
-            src="/src/images/solutions/1.png"
+            src={img1}
             alt=""
             className="object-cover bg-[#EEF6FF] px-4 py-3 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
           />
           <img
-            src="/src/images/solutions/2.png"
+            src={img2}
             alt=""
             className="object-cover bg-[#EEF6FF] px-4 py-3 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
           />
           <img
-            src="/src/images/solutions/3.png"
+            src={img3}
             alt=""
             className="object-cover bg-[#EEF6FF] px-4 py-3 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
           />
           <img
-            src="/src/images/solutions/4.png"
+            src={img4}
             alt=""
             className="object-cover bg-[#EEF6FF] px-4 py-3 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
           />
           <img
-            src="/src/images/solutions/5.png"
+            src={img5}
             alt=""
             className="object-cover bg-[#EEF6FF] px-4 py-3 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
           />
           <img
-            src="/src/images/solutions/6.png"
+            src={img6}
             alt=""
             className="object-cover bg-[#EEF6FF] px-4 py-3 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
           />
@@ -58,7 +66,7 @@ function Solutions() {
             </button>
           </div>
           <div className="bg-[#695ACD] rounded-lg">
-            <img src="src/images/phones.png" alt="" className="pt-20 px-8" />
+            <img src={phones} alt="" className="pt-20 px-8" />
           </div>
           {/*  */}
         </div>

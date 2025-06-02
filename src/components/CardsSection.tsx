@@ -1,3 +1,6 @@
+import key from "../images/key.png";
+import settings from "../images/settings.png";
+
 function cards() {
   return (
     <div className="grid  gap-y-15  mt-10 p-10 bg-[linear-gradient(to_right,purple-100,white)]">
@@ -50,25 +53,25 @@ export default cards;
 const Cardsplace = () => {
   const details = [
     {
-      img: "/src/images/key.png",
+      img: key,
       title: "Unlock your business potential with fifthlab",
       description:
         "At Fifthlab, we've curated a suite of digital solutions to drive growth and efficiency in today's competitive landscape. From optimizing operations to enhancing customer engagement.",
     },
     {
-      img: "/src/images/settings.png",
+      img: settings,
       title: "Tailored Solutions For Every Need",
       description:
         "At Fifthlab, we've curated a suite of digital solutions to drive growth and efficiency in today's competitive landscape. From optimizing operations to enhancing customer engagement.",
     },
     {
-      img: "/src/images/key.png",
+      img: key,
       title: "Tailored Solutions For Every Need.",
       description:
         "At Fifthlab, we've curated a suite of digital solutions to drive growth and efficiency in today's competitive landscape. From optimizing operations to enhancing customer engagement.",
     },
     {
-      img: "/src/images/settings.png",
+      img: settings,
       title: "Unlock your business potential with fifthlab",
       description:
         "At Fifthlab, we've curated a suite of digital solutions to drive growth and efficiency in today's competitive landscape. From optimizing operations to enhancing customer engagement.",
@@ -76,7 +79,7 @@ const Cardsplace = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-12 gap-5 px-6 md:px-20 overflow-hidden ">
+    <div className="grid grid-cols-1 md:grid-cols-12 gap-5 px-6 md:px-20 overflow-hidden pb-10">
       {details.map((item, index) => {
         // Determine column span per card
         let colSpanClass = "md:col-span-6";

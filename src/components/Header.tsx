@@ -75,7 +75,7 @@ export default function Header() {
           item.name === "Products" ? (
             <DropdownMenu key={item.name}>
               <DropdownMenuTrigger asChild>
-                <button className="flex items-center gap-1 py-3 md:py-0 text-gray-700 hover:text-blue-500 transition-colors duration-300 text-lg md:text-base">
+                <button className="flex items-center gap-1 py-3 md:py-0 text-gray-700 hover:text-blue-500 transition-colors duration-300 text-lg md:text-base focus-visible:outline-none">
                   <span>{item.name}</span>
                   <ChevronDown className="w-4 h-4" />
                 </button>

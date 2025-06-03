@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import { memo } from "react";
 import { Star, MoveRight } from "lucide-react";
 import { Button } from "../components/ui/button";
 import bgc from "@/images/Landing Page Abstract 2024.svg";

@@ -9,11 +9,11 @@ import wema from "@/images/banks/wema.png";
 
 function Marq() {
   return (
-    <div className="flex flex-col justify-center items-center bg-[#F2F2F2B2] py-4 px-20">
+    <div className="flex flex-col justify-center items-center bg-[#F2F2F2B2] py-4 px-20 gap-5 capitalize">
       <h1 className="text-xs text-center text-[#47478a] font-semibold">
         We are currently used and trusted by
       </h1>
-      <div className="flex items-center justify-around w-full  ">
+      <div className="sm:flex items-center justify-around w-full grid grid-cols-4 gap-5  ">
         <img src={access} className="w-22" alt="" />
         <img src={bankly} className="w-22" alt="" />
         <img src={FirstBank} className="w-22" alt="" />

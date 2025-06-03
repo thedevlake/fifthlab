@@ -9,69 +9,56 @@ import { ArrowUpRight } from "lucide-react";
 
 function Solutions() {
   return (
-    <div className="my-20 text-center mx-auto px-28">
-      <div className="flex flex-col  gap-7">
-        <h1 className="text-3xl text-[#0E0E0E] font-semibold">Our Solutions</h1>
-        <p className="text-[#A7A7A7] text-base mt-2">
+    <div className="my-20 text-center px-4 sm:px-10 lg:px-28">
+      <div className="flex flex-col gap-10">
+        <h1 className="text-xl sm:text-2xl md:text-3xl text-[#0E0E0E] font-semibold">
+          Our Solutions
+        </h1>
+        <p className="text-[#A7A7A7] text-xs sm:text-sm md:text-base leading-relaxed">
           This is just a randomly generated text to be included in a later date{" "}
-          <br />
+          <br className="hidden sm:block" />
           based on a final draft to be decided by the content team.
         </p>
-        {/*  */}
-        <div className="flex justify-center gap-10">
-          <img
-            src={img1}
-            alt=""
-            className="object-cover bg-[#EEF6FF] px-4 py-3 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
-          />
-          <img
-            src={img2}
-            alt=""
-            className="object-cover bg-[#EEF6FF] px-4 py-3 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
-          />
-          <img
-            src={img3}
-            alt=""
-            className="object-cover bg-[#EEF6FF] px-4 py-3 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
-          />
-          <img
-            src={img4}
-            alt=""
-            className="object-cover bg-[#EEF6FF] px-4 py-3 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
-          />
-          <img
-            src={img5}
-            alt=""
-            className="object-cover bg-[#EEF6FF] px-4 py-3 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
-          />
-          <img
-            src={img6}
-            alt=""
-            className="object-cover bg-[#EEF6FF] px-4 py-3 rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
-          />
+
+        {/* Images Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 justify-items-center">
+          {[img1, img2, img3, img4, img5, img6].map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt={`solution-${index + 1}`}
+              className="object-cover bg-[#EEF6FF] px-3 py-2 rounded-lg shadow-xl hover:shadow-2xl transition-transform duration-300 transform hover:scale-105 w-full max-w-[120px] sm:max-w-[140px] md:max-w-[160px]"
+            />
+          ))}
         </div>
-        {/*  */}
-        <div className=" mt-4 grid grid-cols-2 place-items-center mx-auto px-10 pt-15 pb-12 rounded-2xl shadow-lg gap-10 bg-white">
-          {/*  */}
-          <div className="justify-start items-start text-left gap-y-5 w-[400px] flex flex-col">
-            <p className="text-black text-2xl font-bold">SmerpGo</p>
-            <p className="text-[#828282] text-sm">
+
+        {/* SmerpGo Section */}
+        <div className="mt-10 flex flex-col md:flex-row items-center justify-center gap-8 p-6 sm:p-10 rounded-2xl shadow-lg bg-white text-left">
+          <div className="flex flex-col gap-4 max-w-md">
+            <p className="text-black text-lg sm:text-xl md:text-2xl font-bold">
+              SmerpGo
+            </p>
+            <p className="text-[#828282] text-xs sm:text-sm md:text-base leading-relaxed">
               Take control of your business operations with SMERP, our
-              comprehensive Enterprise Resource Planning (ERP) software.  SMERP
+              comprehensive Enterprise Resource Planning (ERP) software. SMERP
               streamlines tasks like inventory management, financial reporting,
               and customer relationship management, allowing you to focus on
               what matters most - growing your business.
             </p>
-            <div className="flex items-center gap-3 bg-black text-white p-3 rounded-full hover:outline-3 hover:outline-blue-300">
-              <button className="text-sm">Visit Website</button>
-
+            <div className="flex items-center gap-3 bg-black text-white px-5 py-2 rounded-full hover:outline hover:outline-2 hover:outline-blue-300 w-fit">
+              <button className="text-xs sm:text-sm md:text-base">
+                Visit Website
+              </button>
               <ArrowUpRight className="w-4 h-4" />
             </div>
           </div>
-          <div className="bg-[#695ACD] rounded-lg">
-            <img src={phones} alt="" className="pt-20 px-8" />
+          <div className="w-full md:w-auto">
+            <img
+              src={phones}
+              alt="phones"
+              className="w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto"
+            />
           </div>
-          {/*  */}
         </div>
       </div>
     </div>

@@ -11,7 +11,6 @@ import { ChevronDown } from "lucide-react";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const navItems = [
     { name: "Home", href: "/" },
@@ -22,16 +21,16 @@ export default function Header() {
 
   return (
     <header className="bg-white border px-4 md:px-20 flex justify-between py-4 md:py-6 items-center shadow-md relative">
-      {/* logo */}
+      {/* Logo */}
       <div>
         <img
           src={logo}
           alt="Fifthlab Logo"
-          className="  size-1/2 sm:size-auto hover:scale-105 transition-transform duration-300 "
+          className="w-28 sm:w-auto hover:scale-105 transition-transform duration-300"
         />
       </div>
 
-      {/* Hamburger menu for mobile */}
+      {/* Hamburger for mobile */}
       <button
         className="md:hidden p-2 rounded focus:outline-none"
         onClick={() => setMenuOpen((open) => !open)}
@@ -61,8 +60,10 @@ export default function Header() {
         </svg>
       </button>
 
-      {/* NavItems */}
+      {/* Navigation */}
       <nav
+        role="navigation"
+        aria-label="Main Navigation"
         className={`
           flex-col md:flex-row md:flex gap-8 md:gap-10 items-center sm:text-lg
           absolute md:static top-full left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none z-20
@@ -72,39 +73,44 @@ export default function Header() {
       >
         {navItems.map((item) =>
           item.name === "Products" ? (
-            <DropdownMenu
-              key={item.name}
-              open={dropdownOpen}
-              onOpenChange={setDropdownOpen}
-            >
+            <DropdownMenu key={item.name}>
               <DropdownMenuTrigger asChild>
-                <a
-                  href={item.href}
-                  className="flex items-center gap-1 py-3 md:py-0 text-gray-700 hover:text-blue-500 transition-colors duration-300 text-lg md:text-base"
-                  onClick={() => setMenuOpen(false)}
-                  onMouseEnter={() => setDropdownOpen(true)}
-                  onMouseLeave={() => setDropdownOpen(false)}
-                >
+                <button className="flex items-center gap-1 py-3 md:py-0 text-gray-700 hover:text-blue-500 transition-colors duration-300 text-lg md:text-base">
                   <span>{item.name}</span>
-                  <span
-                    onMouseEnter={() => setDropdownOpen(true)}
-                    onMouseLeave={() => setDropdownOpen(false)}
-                  >
-                    <ChevronDown className="w-4 h-4" />
-                  </span>
-                </a>
+                  <ChevronDown className="w-4 h-4" />
+                </button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent
-                className="gap-3 px-5 py-2 grid grid-cols-2 sm:grid-cols-1 sm:gap-3"
-                onMouseEnter={() => setDropdownOpen(true)}
-                onMouseLeave={() => setDropdownOpen(false)}
-              >
-                <DropdownMenuItem>SmerpGO</DropdownMenuItem>
-                <DropdownMenuItem>KuleanPay</DropdownMenuItem>
-                <DropdownMenuItem>Finedge</DropdownMenuItem>
-                <DropdownMenuItem>PESSO</DropdownMenuItem>
-                <DropdownMenuItem>Bulkwave</DropdownMenuItem>
-                <DropdownMenuItem>UCP</DropdownMenuItem>
+              <DropdownMenuContent className="gap-3 px-5 py-2 grid grid-cols-2 sm:grid-cols-1 sm:gap-3">
+                <DropdownMenuItem asChild>
+                  <a href="/products/smerpgo" className="hover:underline">
+                    SmerpGO
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a href="/products/kuleanpay" className="hover:underline">
+                    KuleanPay
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a href="/products/finedge" className="hover:underline">
+                    Finedge
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a href="/products/pesso" className="hover:underline">
+                    PESSO
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a href="/products/bulkwave" className="hover:underline">
+                    Bulkwave
+                  </a>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <a href="/products/ucp" className="hover:underline">
+                    UCP
+                  </a>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           ) : (
@@ -114,12 +120,13 @@ export default function Header() {
               className="flex items-center gap-1 py-3 md:py-0 text-gray-700 hover:text-blue-500 transition-colors duration-300 text-lg md:text-base"
               onClick={() => setMenuOpen(false)}
             >
-              <span>{item.name}</span>
+              {item.name}
             </a>
           )
         )}
-        {/* button (mobile: inside menu, desktop: outside menu) */}
-        <div className=" md:hidden w-full flex justify-center  pb-4">
+
+        {/* Button for mobile */}
+        <div className="md:hidden w-full flex justify-center pb-4">
           <Button
             variant="outline"
             className="w-fit mx-auto bg-[#00B4D8] rounded-full text-white py-5 px-5 hover:bg-[#0077B6] transition-colors duration-300"
@@ -129,7 +136,7 @@ export default function Header() {
         </div>
       </nav>
 
-      {/* button (desktop only) */}
+      {/* Button for desktop */}
       <div className="hidden md:block">
         <Button
           variant="outline"
